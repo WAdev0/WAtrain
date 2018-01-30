@@ -1,0 +1,693 @@
+version: 1
+#############################################################################
+# Licensed Materials - Property of HCL*
+# (C) Copyright HCL Technologies Ltd. 2017, 2018 All rights reserved.
+# * Trademark of HCL Technologies Limited
+#############################################################################
+
+# LDAP directory to use with Workload Scheduler training
+
+dn: dc=hcl,dc=com
+objectClass: organization
+objectClass: dcObject
+objectClass: top
+dc: hcl
+o: HCL Technologies
+
+dn: cn=admin,dc=hcl,dc=com
+objectClass: organizationalRole
+cn: admin
+description: Directory admin
+
+dn: ou=People,dc=hcl,dc=com
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Group,dc=hcl,dc=com
+objectClass: organizationalUnit
+ou: Group
+
+dn: cn=classRealm,dc=hcl,dc=com
+objectClass: top
+objectClass: organizationalRole
+cn: classRealm
+
+dn: ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: organizationalUnit
+ou: users
+
+dn: uid=tcruser1,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: top
+cn: TCR User1
+sn: User1
+uid: tcruser1
+userPassword:: e1NTSEF9OU4zV29qcUU0VUR2TUoxclduUUl4TEVIeFd1dGwrMU0=
+
+dn: uid=tcruser2,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: top
+cn: TCR User2
+sn: User2
+uid: tcruser2
+userPassword:: e1NTSEF9cVJDd0pqamJIRUk1VDhoSWxKM2dyTXpUNldYQWd3WE0=
+
+dn: uid=tipuser1,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: top
+cn: TIP User1
+sn: User1
+uid: tipuser1
+userPassword:: e1NTSEF9akJQbXdHbU90Sk5jU29XejRnaDhsV0Y0akNIb1NmbkY=
+
+dn: uid=tipuser2,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: top
+cn: TIP User2
+sn: User2
+uid: tipuser2
+userPassword:: e1NTSEF9NnBTRmpicWN4V2FyYzJxakZHN1ljVFRZRS9LSERXQ2o=
+
+dn: ou=groups,cn=classRealm,dc=hcl,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: tipgroups
+ou: groups
+
+dn: cn=Administrators,cn=classRealm,dc=hcl,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: Administrators
+member: cn=admin
+
+dn: uid=admin,cn=classRealm,dc=hcl,dc=com
+objectClass: top
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+cn: admin
+sn: admin
+uid: admin
+
+dn: cn=WPAdministrators,ou=groups,cn=classRealm,dc=hcl,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: WPAdministrators
+member: uid=Administrator,cn=classRealm,dc=hcl,dc=com
+member: cn=admin
+
+dn: cn=Tinisha Fowble,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Tinisha Fowble
+sn: Fowble
+displayName: Fowble, Tinisha
+employeeNumber: 8675300
+employeeType: full-time
+facsimileTelephoneNumber: 1-900-300-5577
+givenName: Tinisha
+l: Albert Lea
+mail: tfowble@hcl.com
+manager: cn=Tinisha Fowble,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-507-555-5588
+pager: pager
+physicalDeliveryOfficeName: 0
+postalCode: 00000
+st: FL
+street:: S2VybWl0IERyaXZlIA==
+telephoneNumber: 1-507-555-5599
+uid: tfowble
+userPassword:: e1NTSEF9YTlkbkRsWHE2akRjM1B5eGpPaWlwMWl4QXJ4SEZFN1I=
+
+dn: cn=Emelda Lotempio,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Emelda Lotempio
+sn: Lotempio
+displayName: Lotempio, Emelda
+employeeNumber: 8675301
+employeeType: full-time
+facsimileTelephoneNumber: 1-800-700-5522
+givenName: Emelda
+l: Long Beach
+mail: elotempio@hcl.com
+manager: cn=Tinisha Fowble,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-700-607-5533
+pager: pager
+physicalDeliveryOfficeName: 1
+postalCode: 52242
+st: TX
+street:: UmlnZ3MgQXZlbnVlIA==
+telephoneNumber: 1-800-607-5533
+uid: elotempio
+userPassword:: e1NTSEF9dzlMamExcldWL0VnMHNlSnUwbVRwbEpDc0R1R0dwSE8=
+
+dn: cn=Jasper Guglielmo,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Jasper Guglielmo
+sn: Guglielmo
+displayName: Guglielmo, Jasper
+employeeNumber: 8675302
+employeeType: full-time
+facsimileTelephoneNumber: 1-700-500-5555
+givenName: Jasper
+l: Raleigh
+mail: jguglielmo@hcl.com
+manager: cn=Tinisha Fowble,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-800-400-5566
+pager: pager
+physicalDeliveryOfficeName: 2
+postalCode: 55901
+st: RI
+street:: Qmlsb3hpIExhbmUg
+telephoneNumber: 1-800-500-5555
+uid: jguglielmo
+userPassword:: e1NTSEF9QUNEM3RyS2p0cEtHMWFiRko0UWFRbXpOVmtTSTB6YTc=
+
+dn: cn=Kory Sweetland,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Kory Sweetland
+sn: Sweetland
+displayName: Sweetland, Kory
+employeeNumber: 8675303
+employeeType: full-time
+facsimileTelephoneNumber: 1-600-555-5555
+givenName: Kory
+l: Fond du Lac
+mail: ksweetland@hcl.com
+manager: cn=Tinisha Fowble,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-507-555-5599
+pager: pager
+physicalDeliveryOfficeName: 3
+postalCode: 54935
+st: WI
+street:: VGVkZm9yZCBMYW5lIA==
+telephoneNumber: 1-700-800-5511
+uid: ksweetland
+userPassword:: e1NTSEF9dm1xdzcrZitIVDRaS0NTUGlFY2pVdHpuRzZoRzVWV0Y=
+
+dn: cn=Keesha Holzheimer,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Keesha Holzheimer
+sn: Holzheimer
+displayName: Holzheimer, Keesha
+employeeNumber: 8675304
+employeeType: full-time
+facsimileTelephoneNumber: 1-800-400-5566
+givenName: Keesha
+l: Fond du Lac
+mail: kholzheimer@hcl.com
+manager: cn=Tinisha Fowble,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-800-700-5522
+pager: pager
+physicalDeliveryOfficeName: 4
+postalCode: 54935
+st: FL
+street:: U3VzYW5uZSBBdmVudWUg
+telephoneNumber: 1-507-555-5500
+uid: kholzheimer
+userPassword:: e1NTSEF9TTY4dTUxTWxuMXJVVWp5UlVzaFBwaW9yYUZLTEEyZmY=
+
+dn: cn=Bart Winebarger,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Bart Winebarger
+sn: Winebarger
+displayName: Winebarger, Bart
+employeeNumber: 8675300
+employeeType: full-time
+facsimileTelephoneNumber: 1-507-555-5522
+givenName: Bart
+l: Miami
+mail: bwinebarger@hcl.com
+manager: cn=Bart Winebarger,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-507-555-5555
+pager: pager
+physicalDeliveryOfficeName: 0
+postalCode: 66666
+st: WI
+street:: UmF0aGVyIFJvYWQg
+telephoneNumber: 1-507-555-5500
+uid: bwinebarger
+userPassword:: e1NTSEF9MHJpUlV1dkNuaEw3N2hyWS9GYkRMazBtd3dTbGorUW0=
+
+dn: cn=Jaime Vasso,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Jaime Vasso
+sn: Vasso
+displayName: Vasso, Jaime
+employeeNumber: 8675301
+employeeType: full-time
+facsimileTelephoneNumber: 1-507-555-5544
+givenName: Jaime
+l: Rochester
+mail: jvasso@hcl.com
+manager: cn=Bart Winebarger,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-507-555-5544
+pager: pager
+physicalDeliveryOfficeName: 1
+postalCode: 52242
+st: GA
+street:: SGF6ZWxudXQgRHJpdmUg
+telephoneNumber: 1-800-800-5511
+uid: jvasso
+userPassword:: e1NTSEF9ckpZaHl5M2FxcUp6c21VSzhCRTJxb2MrMXVoL05uM2I=
+
+dn: cn=Gerald Baillio,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Gerald Baillio
+sn: Baillio
+displayName: Baillio, Gerald
+employeeNumber: 8675302
+employeeType: full-time
+facsimileTelephoneNumber: 1-507-555-5566
+givenName: Gerald
+l: Lexington
+mail: gbaillio@hcl.com
+manager: cn=Bart Winebarger,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-800-300-5577
+pager: pager
+physicalDeliveryOfficeName: 2
+postalCode: 55901
+st: TX
+street:: T3R0YXJpIERyaXZlIA==
+telephoneNumber: 1-700-800-5511
+uid: gbaillio
+userPassword:: e1NTSEF9TlZ0STRwUEV6aW16b2IxRHpuM2tqRE5ySm9FQk9UV3o=
+
+dn: cn=Zackary Iverslie,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Zackary Iverslie
+sn: Iverslie
+displayName: Iverslie, Zackary
+employeeNumber: 8675303
+employeeType: full-time
+facsimileTelephoneNumber: 1-507-555-5544
+givenName: Zackary
+l: Rochester
+mail: ziverslie@hcl.com
+manager: cn=Bart Winebarger,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-800-400-5566
+pager: pager
+physicalDeliveryOfficeName: 3
+postalCode: 78758
+st: WI
+street:: SHVudHNtYW4gQ291cnQg
+telephoneNumber: 1-800-400-5566
+uid: ziverslie
+userPassword:: e1NTSEF9aUk3NC9tUGRhVkZBRHp2K2RsQUxoQVI3dmRLYVh0K1k=
+
+dn: cn=Ariana Braman,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Ariana Braman
+sn: Braman
+displayName: Braman, Ariana
+employeeNumber: 8675304
+employeeType: full-time
+facsimileTelephoneNumber: 1-800-800-5511
+givenName: Ariana
+l: Madison
+mail: abraman@hcl.com
+manager: cn=Bart Winebarger,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-800-600-5544
+pager: pager
+physicalDeliveryOfficeName: 4
+postalCode: 55904
+st: WI
+street:: QnJvY2sgUm9hZCA=
+telephoneNumber: 1-800-800-5511
+uid: abraman
+userPassword:: e1NTSEF9Rkw4TXBNUC85L3Z4MUIzeng5Vm9JejJvSzdhZHgvbGE=
+
+dn: cn=Dick Selan,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Dick Selan
+sn: Selan
+displayName: Selan, Dick
+employeeNumber: 8675300
+employeeType: full-time
+facsimileTelephoneNumber: 1-700-600-5544
+givenName: Dick
+l: Atlanta
+mail: dselan@hcl.com
+manager: cn=Dick Selan,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-507-555-5500
+pager: pager
+physicalDeliveryOfficeName: 0
+postalCode: 55901
+st: RI
+street:: TW9yZ2FuIENpcmNsZSA=
+telephoneNumber: 1-800-800-5511
+uid: dselan
+userPassword:: e1NTSEF9RURxMmIrSXJiRUE4ZitaMVZiaTdaTFdzVzFuc3VTZFg=
+
+dn: cn=Melvin Harthorne,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Melvin Harthorne
+sn: Harthorne
+displayName: Harthorne, Melvin
+employeeNumber: 8675301
+employeeType: full-time
+facsimileTelephoneNumber: 1-500-555-5544
+givenName: Melvin
+l: San Fransisco
+mail: mharthorne@hcl.com
+manager: cn=Dick Selan,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-600-555-5555
+pager: pager
+physicalDeliveryOfficeName: 1
+postalCode: 77777
+st: RI
+street:: RGVsYXdhcmUgQXZlbnVlIA==
+telephoneNumber: 1-400-555-5533
+uid: mharthorne
+userPassword:: e1NTSEF9dHhmMVhUYnd0WUJrREhxZlRjK1VVemJLN2VZTzg1d0g=
+
+dn: cn=Else Zegarelli,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Else Zegarelli
+sn: Zegarelli
+displayName: Zegarelli, Else
+employeeNumber: 8675302
+employeeType: full-time
+facsimileTelephoneNumber: 1-507-555-5577
+givenName: Else
+l: Poughkeepsie
+mail: ezegarelli@hcl.com
+manager: cn=Dick Selan,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-800-500-5555
+pager: pager
+physicalDeliveryOfficeName: 2
+postalCode: 55901
+st: GA
+street:: VHJlbnR2aWxsZSBXYXkg
+telephoneNumber: 1-507-555-5511
+uid: ezegarelli
+userPassword:: e1NTSEF9RitldkFtU2lEa0EwSTF0Rmg2cFZ3QnhELzh2MjZhTmI=
+
+dn: cn=Karine Kingsolver,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Karine Kingsolver
+sn: Kingsolver
+displayName: Kingsolver, Karine
+employeeNumber: 8675303
+employeeType: full-time
+facsimileTelephoneNumber: 1-507-555-5566
+givenName: Karine
+l: Milwaukee
+mail: kkingsolver@hcl.com
+manager: cn=Dick Selan,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-507-555-5522
+pager: pager
+physicalDeliveryOfficeName: 3
+postalCode: 01234
+st: TX
+street:: V29vZGVkIExhbmUg
+telephoneNumber: 1-507-555-5500
+uid: kkingsolver
+userPassword:: e1NTSEF9SlVvekR4U1JWYkpITDUwcVR6RVdad1FzbVpVR3VkRmc=
+
+dn: cn=Thanh Engbretson,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Thanh Engbretson
+sn: Engbretson
+displayName: Engbretson, Thanh
+employeeNumber: 8675304
+employeeType: full-time
+facsimileTelephoneNumber: 1-507-555-5577
+givenName: Thanh
+l: St. Cloud
+mail: tengbretson@hcl.com
+manager: cn=Dick Selan,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-507-555-5555
+pager: pager
+physicalDeliveryOfficeName: 4
+postalCode: 00000
+st: NC
+street:: QXBwbGV0b24gV2F5IA==
+telephoneNumber: 1-700-800-5511
+uid: tengbretson
+userPassword:: e1NTSEF9SDhNZ1g5ejdZNDJSR0t5OFoxQ1UzYm11YXdOTjB0eHo=
+
+dn: cn=Houston Dold,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Houston Dold
+sn: Dold
+displayName: Dold, Houston
+employeeNumber: 8675300
+employeeType: full-time
+facsimileTelephoneNumber: 1-800-400-5566
+givenName: Houston
+l: Raleigh
+mail: hdold@hcl.com
+manager: cn=Houston Dold,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-800-400-5566
+pager: pager
+physicalDeliveryOfficeName: 0
+postalCode: 55555
+st: TX
+street:: Q2VkYXIgQ3JvZnQgQ2lyY2xlIA==
+telephoneNumber: 1-800-300-5577
+uid: hdold
+userPassword:: e1NTSEF9V1gwaGFicDA0S01MMXJ2VW90Y3VOTGFrOFErNUp1MG4=
+
+dn: cn=Earline Ange,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Earline Ange
+sn: Ange
+displayName: Ange, Earline
+employeeNumber: 8675301
+employeeType: full-time
+facsimileTelephoneNumber: 1-800-700-5522
+givenName: Earline
+l: Poughkeepsie
+mail: eange@hcl.com
+manager: cn=Houston Dold,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-300-555-5522
+pager: pager
+physicalDeliveryOfficeName: 1
+postalCode: 55901
+st: OR
+street:: UmF5IE1lYXJzIEJsdmQg
+telephoneNumber: 1-300-555-5522
+uid: eange
+userPassword:: e1NTSEF9VFh2aThhZ3g3KzdxTzA1US82c1Fvd3NaVU0rWjVLYTk=
+
+dn: cn=Maxima Lamendola,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Maxima Lamendola
+sn: Lamendola
+displayName: Lamendola, Maxima
+employeeNumber: 8675302
+employeeType: full-time
+facsimileTelephoneNumber: 1-700-555-5566
+givenName: Maxima
+l: Madison
+mail: mlamendola@hcl.com
+manager: cn=Houston Dold,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-507-555-5511
+pager: pager
+physicalDeliveryOfficeName: 2
+postalCode: 55555
+st: WI
+street:: V2VzdCBFbmQgQXZlbnVlIA==
+telephoneNumber: 1-700-555-5566
+uid: mlamendola
+userPassword:: e1NTSEF9UkNPWUVNWC9MM0tsa1JMdVRYNUxURGlaUTJkR25ONVc=
+
+dn: cn=Adeline Durling,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Adeline Durling
+sn: Durling
+displayName: Durling, Adeline
+employeeNumber: 8675303
+employeeType: full-time
+facsimileTelephoneNumber: 1-800-700-5522
+givenName: Adeline
+l: St. Paul
+mail: adurling@hcl.com
+manager: cn=Houston Dold,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-507-555-5577
+pager: pager
+physicalDeliveryOfficeName: 3
+postalCode: 77777
+st: WI
+street:: Qm9iIFZhcm5lciBSb2FkIA==
+telephoneNumber: 1-800-400-5566
+uid: adurling
+userPassword:: e1NTSEF9VWdqOENmMkd0OCttZW01dWI3SmRtM0s1RlZSZm54KzQ=
+
+dn: cn=Jorge Mulberry,ou=users,cn=classRealm,dc=hcl,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+objectClass: inetOrgPerson
+cn: Jorge Mulberry
+sn: Mulberry
+displayName: Mulberry, Jorge
+employeeNumber: 8675304
+employeeType: full-time
+facsimileTelephoneNumber: 1-507-555-5522
+givenName: Jorge
+l: Milwaukee
+mail: jmulberry@hcl.com
+manager: cn=Houston Dold,ou=users,cn=classRealm,dc=hcl,dc=com
+mobile: 1-507-555-5577
+pager: pager
+physicalDeliveryOfficeName: 4
+postalCode: 54935
+st: WI
+street:: RSBZb3VuZyBIaWdoIFBpa2Ug
+telephoneNumber: 1-507-555-5522
+uid: jmulberry
+userPassword:: e1NTSEF9UjBlNnd1aDQ0bk44STdjUVVIQXZIb0p1U0IrZ3JEeDI=
+
+dn: uid=Administrator,cn=classRealm,dc=hcl,dc=com
+objectClass: top
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+cn: Administrator
+sn: Administrator
+uid: Administrator
+userPassword:: e1NTSEF9aVZSRE8vRU5CbnFrMkdrSDVlNjB4eHlDcmVFbnAzNk8=
+
+dn: cn=WPAdministrators,cn=classRealm,dc=hcl,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: WPAdministrators
+member: uid=Administrator,cn=classRealm,dc=hcl,dc=com
+
+dn: cn=twsAdministrators,ou=groups,cn=classRealm,dc=hcl,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: twsAdministrators
+member: cn=thanh engbretson,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=houston dold,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=earline ange,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=maxima lamendola,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=adeline durling,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=jorge mulberry,ou=users,cn=classRealm,dc=hcl,dc=com
+
+dn: cn=twsOperators,ou=groups,cn=classRealm,dc=hcl,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: twsOperators
+member: uid=tipuser1,ou=users,cn=classRealm,dc=hcl,dc=com
+member: uid=tipuser2,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=tinisha fowble,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=emelda lotempio,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=jasper guglielmo,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=kory sweetland,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=keesha holzheimer,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=bart winebarger,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=jaime vasso,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=gerald baillio,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=zackary iverslie,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=dick selan,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=melvin harthorne,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=thanh engbretson,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=houston dold,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=earline ange,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=maxima lamendola,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=adeline durling,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=jorge mulberry,ou=users,cn=classRealm,dc=hcl,dc=com
+
+dn: cn=twsSchedulers,ou=groups,cn=classRealm,dc=hcl,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: twsSchedulers
+member: uid=tipuser1,ou=users,cn=classRealm,dc=hcl,dc=com
+member: uid=tipuser2,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=tinisha fowble,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=keesha holzheimer,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=bart winebarger,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=gerald baillio,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=zackary iverslie,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=ariana braman,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=dick selan,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=houston dold,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=earline ange,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=maxima lamendola,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=adeline durling,ou=users,cn=classRealm,dc=hcl,dc=com
+
+dn: cn=twsAnalysts,ou=groups,cn=classRealm,dc=hcl,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: twsAnalysts
+member: uid=tcruser1,ou=users,cn=classRealm,dc=hcl,dc=com
+member: uid=tcruser2,ou=users,cn=classRealm,dc=hcl,dc=com
+member: uid=tipuser1,ou=users,cn=classRealm,dc=hcl,dc=com
+member: uid=tipuser2,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=keesha holzheimer,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=bart winebarger,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=dick selan,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=else zegarelli,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=karine kingsolver,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=houston dold,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=maxima lamendola,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=adeline durling,ou=users,cn=classRealm,dc=hcl,dc=com
+member: cn=jorge mulberry,ou=users,cn=classRealm,dc=hcl,dc=com
+
